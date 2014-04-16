@@ -9,8 +9,8 @@ Spark::Application.routes.draw do
   get   '/logout'             => 'page#logout'
   
   match '/ideas'              => 'page#ideas',          via: [:get, :post]
-  match '/idea/:idea_id'      => 'page#idea',           via: [:get, :post]
   match '/idea/create'        => 'page#create_idea',    via: [:get, :post]
+  match '/idea/:idea_id'      => 'page#idea',           via: [:get, :post]
   match '/idea/:idea_id/edit' => 'page#edit_idea',      via: [:get, :post]
 
 end

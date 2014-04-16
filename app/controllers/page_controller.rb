@@ -7,12 +7,54 @@ class PageController < ApplicationController
   end
 
   def settings
+
+    if is_logined and params[:nickname] != nil
+      @current_user.nickname = params[:nickname]
+      @current_user.save       
+    end
+
+    if is_logined and params[:old_password] != nil and params[:new_password] != nil and params[:new_password] == params[:confirm_password]
+      if @current_user.check_password(Digest::MD5.hexdigest(params[:old_password]))
+        new_password = Digest::MD5.hexdigest(params[:new_password])
+        @current_user.password = Digest::SHA1.hexdigest("#{@current_user.salt}--#{new_password}")
+        @current_user.save     
+      end
+    end
+
+    @title = I18n.t('Setting')
   end
-  
+
   def about
   end
 
   def ideas
+    @ideas = Idea.all
+  end
+  
+  def idea
+    @idea = Idea.find(params[:idea_id])
+
+    if is_logined and params[:comment] != nil
+      comment = Comment.new
+      comment.user_id = @current_user.id
+      comment.idea_id = @idea.id
+      comment.content = params[:comment]
+      comment.save
+    end
+
+    @comments = Comment.joins([:user]).select("users.nickname, comments.content, comments.updated_at").find(:all, :conditions => { :idea_id => @idea.id })
+  end
+
+  def create_idea
+    if is_logined and params[:title] != nil and params[:description] != nil
+      idea = Idea.new
+      idea.user_id = @current_user.id
+      idea.title = params[:title]
+      idea.description = params[:description]
+      idea.save
+
+      redirect_to ideas_path
+    end
   end
 
   def login                    

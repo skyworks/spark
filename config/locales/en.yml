@@ -1,7 +1,12 @@
 en:
+  confirm_password: "确认密码"
   Email:            "邮箱"
   Login:            "登录"
   login_fail:       "登录失败"
+  new_password:     "新密码"
   Nickname:         "昵称"
+  old_password:     "旧密码"
   Password:         "密码"
   Register:         "注册"
+  Save:             "保存"
+  Setting:          "设置"

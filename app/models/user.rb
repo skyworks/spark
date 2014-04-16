@@ -6,6 +6,8 @@ class EmailValidator < ActiveModel::EachValidator
 end 
 
 class User < ActiveRecord::Base
+  has_many :comments
+  
   validates :email, :presence => true, 
     :email => true,                 
     :uniqueness => { :case_sensitive => false } 

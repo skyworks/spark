@@ -1,1 +1,11 @@
-ideas
+
+<div>
+  <span><%= link_to 'Create', '/idea/create' %></span>
+</div>
+
+<% @ideas.each do |idea| %>
+  <div>
+    <span><%= link_to idea.title, "/idea/#{idea.id}" %></span>
+  </div>
+<% end %>
+

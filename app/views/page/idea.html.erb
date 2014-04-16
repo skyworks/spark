@@ -1,0 +1,16 @@
+<div>
+  <div><%= @idea.title %></div>
+  <div><%= @idea.description %></div>
+</div>
+
+<% @comments.each do |comment| %>
+  <div>
+    <div><%= comment.nickname %>:<%= comment.content %></div>
+  </div>
+<% end %>
+
+<form method="POST">
+  <textarea name="comment"></textarea>
+  <input type="submit" value="comment"/>
+</form>
+

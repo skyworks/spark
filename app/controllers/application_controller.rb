@@ -14,5 +14,8 @@ class ApplicationController < ActionController::Base
     reset_session if session[:last_seen] == nil or session[:last_seen] < 100.days.ago
   end
 
+  def is_logined
+    @current_user != nil
+  end
 
 end
