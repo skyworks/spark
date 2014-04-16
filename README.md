@@ -1,4 +1,0 @@
-spark
-=====
-
-prototype for spark
