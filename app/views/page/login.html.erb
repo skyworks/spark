@@ -1,0 +1,21 @@
+<div class="vpad10">            
+  <span class="bf"><%=t 'Login' %></span>
+</div> 
+
+<% if @login_fail %>           
+  <div class="vpad10">            
+    <span class="bf"><%=t 'login_fail' %></span>
+  </div>
+<% end %>
+
+<form method="POST">           
+  <div class="vpad">           
+    <input name="email" type="text" class="form-control" placeholder="<%=t 'Email' %>">
+  </div>
+  <div class="vpad">              
+    <input name="password" type="password" class="form-control" placeholder="<%=t 'Password' %>">
+  </div>
+  <div class="vpad">              
+    <input type="submit" value="<%=t 'Login' %>" />
+  </div>
+</form>

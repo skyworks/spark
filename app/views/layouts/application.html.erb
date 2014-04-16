@@ -8,7 +8,29 @@
 </head>
 <body>
 
-<%= yield %>
+  <div id="header">
+    <div class="fl">
+      <span><%= link_to 'Spark', root_path %></span>
+      <span><%= link_to 'Idears', ideas_path %></span>
+    </div>
+    <div class="fr">
+      <% if !is_logined %>
+        <span><%= link_to 'Login', login_path %></span>
+        <span><%= link_to 'Register', register_path %></span>
+      <% else %>
+        <span><%= link_to @current_user.nickname, settings_path %></span>
+        <span><%= link_to 'Logout', logout_path %></span>
+      <% end %>
+    </div>
+    <div class="clear"></div>
+  </div>
+  <div id="container">
+    <%= yield %>
+  </div>
+  <div id="footer">
+    <span>copyright 2014 spark</span>
+    <span><%= link_to 'About', about_path %></span>
+  </div>
 
 </body>
 </html>
