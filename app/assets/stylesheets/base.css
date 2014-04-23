@@ -1,0 +1,67 @@
+/*-----css Reset start-----*/
+body{
+    background:white;
+    font-family: "Microsoft YaHei";
+}
+img{
+    border: 0px solid;
+    padding: 0px;
+    margin: 0px;
+}
+input,textarea,select{
+    font-size:100%;
+    font-family:arial;
+    font-family:inherit;
+}
+body,h1,h2,h3,h4,h5,h6,p,ul,ol,form{
+    margin:0;
+}
+h4,h5,h6{
+    font-size:1em;
+}
+ul,ol{
+    padding-left:0;
+    list-style-type:none;
+}
+/*image with no-border*/
+a img{border:0;}
+img{border:0;}
+/*-----css Reset end-----*/
+
+/*-----css base class start-----*/
+#body{
+}
+.hide{
+	display: none;
+}
+.clear{
+	clear: both;
+}
+/*-----css base class end-----*/
+
+/*-----css header start-----*/
+.header{
+	height: 80px;
+	width: 1024px;
+	margin: auto;
+}
+.logo-header{
+	float: left;
+	margin: 14.5px 0px;
+}
+.header-btn-area{
+	margin-left: 20px;
+	float: left;
+}
+.header-btn{
+	width: 70px;
+	height: 80px;
+	cursor: pointer;
+}
+.header-btn:hover{
+	background-color: #e6e6e6;
+}
+.header-btn .active{
+	background-color: #e6e6e6;
+}
+/*-----css header end-----*/
