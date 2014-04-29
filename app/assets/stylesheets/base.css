@@ -87,6 +87,7 @@ img{border:0;}
 .header-btn{
 	width: 70px;
 	height: 80px;
+	float: left;
 	cursor: pointer;
 }
 .header-btn:hover{
@@ -140,7 +141,7 @@ img{border:0;}
 }
 .index-center-float{
 	position: absolute;
-	top: -150px;
+	top: -60px;
 	width: 940px;
 	left: 50%;
 	margin-left: -470px;
@@ -169,6 +170,7 @@ img{border:0;}
 	color: #333;
 	float: right;
 	margin-bottom: -20px;
+	cursor: pointer;
 }
 .index-number-img{
 	margin-right: 20px;
