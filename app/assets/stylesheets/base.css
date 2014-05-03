@@ -203,7 +203,7 @@ img{border:0;}
 /*-----css ideas-container start-----*/
 .ideas-center{
 	position: relative;
-	padding: 60px;
+	padding: 190px 0px;
 }
 .ideas-container{
 	width: 1024px;
@@ -215,11 +215,12 @@ img{border:0;}
 	padding: 25px 60px 15px 60px;
 	background-color: #fff;
 	z-index: 100;
-	width: 820px;
+	width: 870px;
 	left: 50%;
 	top: 25px;
-	margin-left: -470px;
+	margin-left: -495px;
 	background: url(/assets/ideas/ideas-topbox-bg.png) no-repeat #fff right top;
+	box-shadow: 0px 2px 4px #ccc;
 }
 .ideas-top-box-tip{
 	font-size: 16px;
@@ -242,5 +243,35 @@ img{border:0;}
 	margin: 20px 0px 0px 0px;
 	cursor: pointer;
 	text-decoration: none;
+}
+.ideas-item{
+	float: left;
+	width: 480px;
+	padding: 5px 0px;
+	margin: 10px 16px;
+	background-color: #fff;
+}
+.ideas-item-img{
+	height: 70px;
+	width: 480px;
+}
+.ideas-item-content-box{
+	padding: 10px 20px;
+}
+.ideas-item-title{
+	color: #ff0055;
+	font-size: 22px;
+}
+.ideas-item-description{
+	color: #acacac;
+	height: 54px;
+	line-height: 25px;
+	font-size: 14px;
+	margin-top: 15px;
+}
+.ideas-item-author{
+	font-size: 16px;
+	color: #777;
+	margin-bottom: 20px;
 }
 /*-----css ideas-container end-----*/

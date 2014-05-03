@@ -11,7 +11,23 @@
 </div>
 <div class="ideas-center cyan">
 	<div class="ideas-container">
-		
+		<% @ideas.each do |idea| %>
+			<div class="ideas-item">
+				<img src="" class="ideas-item-img"/>
+				<div class="ideas-item-content-box">
+					<div class="ideas-item-title">
+						<%= idea.title %>
+					</div>
+					<div class="ideas-item-description">
+						<%= idea.description %>
+					</div>
+					<div class="ideas-item-author">
+						孙骥
+					</div>
+				</div>
+			</div>
+		<% end %>
+		<div class="clear"></div>
 	</div>
 </div>
 
