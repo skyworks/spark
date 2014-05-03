@@ -1,11 +1,17 @@
-
-<div>
-  <span><%= link_to 'Create', '/idea/create' %></span>
+<div class="ideas-top-box">
+	<div class="ideas-top-box-tip">
+		你是否有过善念的想法，却由于实现的门槛不敢迈出第一步？<br>
+		集众人的力量，或许可以将你的点子付诸实现。
+	</div>
+	<div class="ideas-top-box-title">
+		把你的创见提交给我们吧！
+	</div>
+	<a class="ideas-create-btn" href="/idea/create">提交我的IDEA</a>
+	<div class="clear"></div>
 </div>
-
-<% @ideas.each do |idea| %>
-  <div>
-    <span><%= link_to idea.title, "/idea/#{idea.id}" %></span>
-  </div>
-<% end %>
+<div class="ideas-center cyan">
+	<div class="ideas-container">
+		
+	</div>
+</div>
 
